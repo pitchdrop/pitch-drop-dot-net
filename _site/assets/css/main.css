@@ -1,0 +1,46 @@
+.svg-bg {
+    background-image: url(../img/bg-pattern.png);
+    background-repeat: repeat;
+}
+
+.bg-primary {
+  background-color: #4f2d37!important;
+}
+
+.bg-secondary {
+  background-color: #a5ae51!important;
+}
+
+.img-fluid, .img-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+
+.border-primary {
+  border-color: #4f2d37!important;
+}
+
+.text-primary {
+  color: #4f2d37!important;
+}
+
+.text-secondary {
+  color: #a5ae51!important;
+}
+
+.body, .subtitle, .title {
+  font-family: "Gill Sans MT";
+  font-variant: normal;
+}
+
+body {
+  background-color: #D8D7C2 !important;
+}
+
+.subtitle {
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 100;
+  line-height: 21.6px;
+  letter-spacing: 1.5px;
+}

@@ -1,0 +1,1 @@
+This is the repository for the (pitchdrop.net)[https://www.pitchdrop.net] website. This is the static rebuild of the site.
