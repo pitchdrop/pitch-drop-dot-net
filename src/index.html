@@ -1,0 +1,90 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Pitch Drop Podcasts</title>
+  <meta name="description" content="Home of the Pitch Drop podcast network. Learn about all of our shows and how to support us here.">
+  <link rel="shortcut icon" type="image/jpg" href="./img/favicon.ico"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Include Handlebars from a CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"
+    integrity="sha512-zT3zHcFYbQwjHdKjCu6OMmETx8fJA9S7E6W7kBeFxultf75OPTYUJigEKX58qgyQMi1m1EgenfjMXlRZG8BXaw=="
+    crossorigin="anonymous"></script>
+  <!-- jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- fontawesome icons -->
+  <script defer src="./scripts/bundle.js"></script>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  <!-- my css -->
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+  <!-- The handlebars template -->
+  <script id="address-template" type="text/x-handlebars-template">
+    {{#each freeShow}}
+    <div class="row rounded-3 border border-primary pb-2 mb-4">
+      <div class="col-sm-12 mb-2 pt-2 svg-bg">
+        <h3 class="text-secondary title text-uppercase">{{name}}</h3>
+      </div>
+      <div class="col-sm-3 pt-1">
+        <img src="./img/{{cover}}" alt="Responsive image" class="img-fluid w-100">
+      </div>
+      <div class="body col-sm-8 d-flex flex-column justify-content-between">
+        <div class="">
+          <p>{{description}}</p>
+        </div>
+        <div class="order-last">          
+          <p class="mb-0"><b>Releases: </b>{{releaseSchedule}}</p>
+          <p class="mb-0"><b>Hosts: </b>{{#each hosts}}<span class="host-name">{{name}}</span>{{/each}}</p>
+        </div>
+      </div>
+      <div class="col-sm-1 pt-1 text-center d-flex flex-sm-row flex-md-column justify-content-between">
+          <a href="https://www.{{links.web}}.com" class="text-primary"><i class="fa-3x fa fa-globe"></i></a>
+          <a href="https://podcasts.google.com/feed/{{links.google}}" class="text-primary"><i class="fa-3x fab fa-google-play"></i></a>
+          <a href="https://podcasts.apple.com/us/podcast/{{links.itunes}}" class="text-primary"><i class="fa-3x fa fa-podcast"></i></a>
+          <a href="https://open.spotify.com/show/{{links.spotify}}" class="text-primary"><i class="fa-3x fab fa-spotify"></i></a>
+          <a href="https://feeds.fireside.fm/{{links.rss}}/rss" class="text-primary"><i class="fa-3x fa fa-rss"></i></a>
+      </div>
+    </div>
+    {{/each}}
+  </script>
+
+  <header style="height: 200px !important;" class="text-center bg-primary">
+    <img src="./img/pd-banner.svg" alt="Responsive image" class="img-fluid" style="max-height:200px;">
+  </header>
+  <nav class="navbar navbar-light navbar-expand-lg bg-secondary mb-2">
+    <div class="container">
+      <button class="navbar-toggler"> <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-header">
+      </div>
+      <div class="navbar-collapse collapse show">
+        <ul class="nav navbar-nav">
+          <li role="presentation" class="nav-item active"><a href="/" class="subtitle nav-link active">Our Shows</a>
+          </li>
+          <a href="https://www.patreon.com/pitchdrop" class="nav-link subtitle">Patreon</a>
+          <a href="http://tee.pub/lic/t1EbO45vtTc" class="nav-link subtitle">Store</a>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--This is where handlebars will render the content-->
+  <div class="container pt-2 content-placeholder"></div>
+  <footer class="col-sm-12 text-primary text-center subtitle">
+    <hr>
+    <p>
+      <a href="mailto:contact@pitchdrop.net?Subject=Hello%20again" class="text-primary"><i class="fas fa-envelope fa-2x"></i></a>
+      <a href="https://twitter.com/PitchDropPods" class="text-primary"><i class="fab fa-twitter fa-2x"></i></a>
+      <a href="https://www.patreon.com/pitchdrop" class="text-primary"><i class="fab fa-patreon fa-2x"></i></a>
+    </p>
+    <p>
+      © 2018-<script type="text/javascript">document.write(new Date().getFullYear());</script>, Pitch Drop.
+    </p>
+  </footer>
+</body>
+
+</html>
