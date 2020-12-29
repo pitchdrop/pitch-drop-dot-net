@@ -18,7 +18,10 @@ const paths = {
 function javascriptBuild() {
     return (
         browserify({
-            entries: [`${paths.source}/scripts/font-awesome.js`]
+            entries: [
+              `${paths.source}/scripts/font-awesome.js`,
+              `${paths.source}/scripts/render-shows.js`
+          ]
         })
             .bundle()
             .pipe(source("bundle.js"))
