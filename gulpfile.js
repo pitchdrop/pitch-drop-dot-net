@@ -18,7 +18,7 @@ const paths = {
 function javascriptBuild() {
     return (
         browserify({
-            entries: [`${paths.source}/assets/font-awesome/all.min.js`]
+            entries: [`${paths.source}/scripts/font-awesome.js`]
         })
             .bundle()
             .pipe(source("bundle.js"))
@@ -40,10 +40,15 @@ function htmlBuild() {
 
 function cssBuild() {
   return gulp
-      .src(`${paths.source}/assets/**/*.css`)
+      .src(`${paths.source}/css/*.css`)
       .pipe(postcss([cssnano()]))
-      .pipe(gulp.dest(`${paths.build}/styles`));
+      .pipe(gulp.dest(`${paths.build}/css`));
 }
+
+function copyImages(){
+  return gulp.src(`${paths.source}/img/*`)
+    .pipe(gulp.dest(`${paths.build}/img`));
+};
 
 function cleanup() {
   // Simply execute del with the build folder path
@@ -51,4 +56,4 @@ function cleanup() {
 }
 
 // We have to run the cleanup task first, after which we can run the build tasks 
-exports.default = exports.build = gulp.series(cleanup, gulp.parallel(javascriptBuild, htmlBuild, cssBuild));
+exports.default = exports.build = gulp.series(cleanup, gulp.parallel(javascriptBuild, htmlBuild, cssBuild, copyImages));
