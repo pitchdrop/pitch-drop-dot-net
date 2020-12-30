@@ -16,21 +16,9 @@ const paths = {
 
 
 function javascriptBuild() {
-    return (
-        browserify({
-            entries: [
-              `${paths.source}/scripts/font-awesome.js`,
-              `${paths.source}/scripts/render-shows.js`
-          ]
-        })
-            .bundle()
-            .pipe(source("bundle.js"))
-            // Turn it into a buffer!
-            .pipe(buffer())
-            // And uglify
-            .pipe(uglify())
-            .pipe(gulp.dest(`${paths.build}/scripts`))
-    );
+  return gulp
+  .src(`${paths.source}/scripts/*`)
+  .pipe(gulp.dest(`${paths.build}/scripts`));
 }
 
 // Write our html task in a seperate function

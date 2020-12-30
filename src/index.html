@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html>
 
 <head>
   <meta charset="utf-8">
@@ -7,14 +7,8 @@
   <meta name="description" content="Home of the Pitch Drop podcast network. Learn about all of our shows and how to support us here.">
   <link rel="shortcut icon" type="image/jpg" href="./img/favicon.ico"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Include Handlebars from a CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"
-    integrity="sha512-zT3zHcFYbQwjHdKjCu6OMmETx8fJA9S7E6W7kBeFxultf75OPTYUJigEKX58qgyQMi1m1EgenfjMXlRZG8BXaw=="
-    crossorigin="anonymous"></script>
-  <!-- jquery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <!-- fontawesome icons -->
-  <script defer src="./scripts/bundle.js"></script>
+  <script defer src="./scripts/font-awesome.js"></script>
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
@@ -23,36 +17,6 @@
 </head>
 
 <body>
-  <!-- The handlebars template -->
-  <script id="address-template" type="text/x-handlebars-template">
-    {{#each freeShow}}
-    <div class="row rounded-3 border border-primary pb-2 mb-4">
-      <div class="col-sm-12 mb-2 pt-2 svg-bg">
-        <h3 class="text-secondary title text-uppercase">{{name}}</h3>
-      </div>
-      <div class="col-sm-3 pt-1">
-        <img src="./img/{{cover}}" alt="Responsive image" class="img-fluid w-100">
-      </div>
-      <div class="body col-sm-8 d-flex flex-column justify-content-between">
-        <div class="">
-          <p>{{description}}</p>
-        </div>
-        <div class="order-last">          
-          <p class="mb-0"><b>Releases: </b>{{releaseSchedule}}</p>
-          <p class="mb-0"><b>Hosts: </b>{{#each hosts}}<span class="host-name">{{name}}</span>{{/each}}</p>
-        </div>
-      </div>
-      <div class="col-sm-1 pt-1 text-center d-flex flex-sm-row flex-md-column justify-content-between">
-          <a href="https://www.{{links.web}}.com" class="text-primary"><i class="fa-3x fa fa-globe"></i></a>
-          <a href="https://podcasts.google.com/feed/{{links.google}}" class="text-primary"><i class="fa-3x fab fa-google-play"></i></a>
-          <a href="https://podcasts.apple.com/us/podcast/{{links.itunes}}" class="text-primary"><i class="fa-3x fa fa-podcast"></i></a>
-          <a href="https://open.spotify.com/show/{{links.spotify}}" class="text-primary"><i class="fa-3x fab fa-spotify"></i></a>
-          <a href="https://feeds.fireside.fm/{{links.rss}}/rss" class="text-primary"><i class="fa-3x fa fa-rss"></i></a>
-      </div>
-    </div>
-    {{/each}}
-  </script>
-
   <header style="height: 200px !important;" class="text-center bg-primary">
     <img src="./img/pd-banner.svg" alt="Responsive image" class="img-fluid" style="max-height:200px;">
   </header>
@@ -72,8 +36,109 @@
       </div>
     </div>
   </nav>
-  <!--This is where handlebars will render the content-->
-  <div class="container pt-2 content-placeholder"></div>
+
+  <main class="container">
+  <div class="row rounded-3 border border-primary pb-2 mb-4">
+    <div class="col-sm-12 mb-2 pt-2 svg-bg">
+      <h3 class="text-secondary title text-uppercase">Being Jim Davis</h3>
+    </div>
+    <div class="col-sm-3 pt-1">
+      <img src="./img/bjd.webp" alt="Responsive image" class="img-fluid w-100">
+    </div>
+    <div class="body col-sm-8 d-flex flex-column justify-content-between">
+      <div>
+        <p>Being Jim Davis is the world's premiere daily Garfield chrono-cast. Our mission is to discuss every strip of the comic series before dying of old age. We hope you'll join us and share in the laughter as we catalogue the adventures of everyone's favorite feline. Each episode will be a thorough examination of a single strip. We'll place it in its historical context, unravel its hidden morals and meanings, and consider if the strip stands the test of time. Above all, we promise to always provide our sincere reaction to each strip. Our one desire is to entertain you.</p>
+      </div>
+      <div class="order-last">          
+        <p class="mb-0"><b>Releases: </b>Daily (How do they do it?)</p>
+        <p class="mb-0"><b>Hosts: </b>Chris Winter, John Gibson</p>
+      </div>
+    </div>
+    <div class="col-sm-1 pt-1 text-center d-flex flex-sm-row flex-md-column justify-content-between">
+        <a href="https://www.beingjimdavis.com" class="text-primary"><i class="fa-3x fa fa-globe"></i></a>
+        <a href="https://podcasts.google.com/feed/aHR0cHM6Ly93d3cuYmVpbmdqaW1kYXZpcy5jb20vcnNz" class="text-primary"><i class="fa-3x fab fa-google-play"></i></a>
+        <a href="https://podcasts.apple.com/us/podcast/being-jim-davis/id1148494914" class="text-primary"><i class="fa-3x fa fa-podcast"></i></a>
+        <a href="https://open.spotify.com/show/5SK7dq5i8R4AuxE7e5cyJK?si=A1jsTsMYST6Qsz5b4sXU1A" class="text-primary"><i class="fa-3x fab fa-spotify"></i></a>
+        <a href="https://feeds.fireside.fm/beingjimdavis/rss" class="text-primary"><i class="fa-3x fa fa-rss"></i></a>
+    </div>
+  </div>
+
+  <div class="row rounded-3 border border-primary pb-2 mb-4">
+    <div class="col-sm-12 mb-2 pt-2 svg-bg">
+      <h3 class="text-secondary title text-uppercase">Boku No Stop</h3>
+    </div>
+    <div class="col-sm-3 pt-1">
+      <img src="./img/bnsf.webp" alt="Responsive image" class="img-fluid w-100">
+    </div>
+    <div class="body col-sm-8 d-flex flex-column justify-content-between">
+      <div>
+        <p>Pitch Drop Network hosts rewatch and break down anime. There are jokes and every series is guaranteed to contain war crimes by the barrel. Current anime: Cyborg 009: The Cyborg Soldier</p>
+      </div>
+      <div class="order-last">          
+        <p class="mb-0"><b>Releases: </b>Every other Sunday.</p>
+        <p class="mb-0"><b>Hosts: </b>Chris Taylor, Fletcher Arnett, Matt Marcus</p>
+      </div>
+    </div>
+    <div class="col-sm-1 pt-1 text-center d-flex flex-sm-row flex-md-column justify-content-between">
+        <a href="https://www.bokunostop.com" class="text-primary"><i class="fa-3x fa fa-globe"></i></a>
+        <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9ibnMuZmlyZXNpZGUuZm0vcnNz" class="text-primary"><i class="fa-3x fab fa-google-play"></i></a>
+        <a href="https://podcasts.apple.com/us/podcast/boku-no-stop/id1435114604" class="text-primary"><i class="fa-3x fa fa-podcast"></i></a>
+        <a href="https://open.spotify.com/show/3yL547LSeVkrZW0cTHXGHg?si=PhdaPg0vS4embKvTnHDrMw" class="text-primary"><i class="fa-3x fab fa-spotify"></i></a>
+        <a href="https://feeds.fireside.fm/bns/rss" class="text-primary"><i class="fa-3x fa fa-rss"></i></a>
+    </div>
+  </div>
+
+  <div class="row rounded-3 border border-primary pb-2 mb-4">
+    <div class="col-sm-12 mb-2 pt-2 svg-bg">
+      <h3 class="text-secondary title text-uppercase">Lightning Strikes Thrice</h3>
+    </div>
+    <div class="col-sm-3 pt-1">
+      <img src="./img/lst.webp" alt="Responsive image" class="img-fluid w-100">
+    </div>
+    <div class="body col-sm-8 d-flex flex-column justify-content-between">
+      <div>
+        <p>Lightning Strikes Thrice is a JRPG games club podcast. Play along with us as we discuss the themes, mechanics, and stories of our favorite JRPGs.</p>
+      </div>
+      <div class="order-last">          
+        <p class="mb-0"><b>Releases: </b>Every other Sunday.</p>
+        <p class="mb-0"><b>Hosts: </b>Chris Taylor, Fletcher Arnett, Ryan Batie</p>
+      </div>
+    </div>
+    <div class="col-sm-1 pt-1 text-center d-flex flex-sm-row flex-md-column justify-content-between">
+        <a href="https://www.lightningstrikesthrice.com" class="text-primary"><i class="fa-3x fa fa-globe"></i></a>
+        <a href="https://podcasts.google.com/feed/aHR0cHM6Ly93d3cubGlnaHRuaW5nc3RyaWtlc3RocmljZS5jb20vcnNz" class="text-primary"><i class="fa-3x fab fa-google-play"></i></a>
+        <a href="https://podcasts.apple.com/us/podcast/lightning-strikes-thrice/id1343184958" class="text-primary"><i class="fa-3x fa fa-podcast"></i></a>
+        <a href="https://open.spotify.com/show/0KAWAFybrnwoYESvfcvvVR?si=SQ2mAcLUQ221m6C5JQoA0A" class="text-primary"><i class="fa-3x fab fa-spotify"></i></a>
+        <a href="https://feeds.fireside.fm/lst/rss" class="text-primary"><i class="fa-3x fa fa-rss"></i></a>
+    </div>
+  </div>
+
+  <div class="row rounded-3 border border-primary pb-2 mb-4">
+    <div class="col-sm-12 mb-2 pt-2 svg-bg">
+      <h3 class="text-secondary title text-uppercase">Magmar Sucks</h3>
+    </div>
+    <div class="col-sm-3 pt-1">
+      <img src="./img/ms.png" alt="Responsive image" class="img-fluid w-100">
+    </div>
+    <div class="body col-sm-8 d-flex flex-column justify-content-between">
+      <div>
+        <p>Pokemon are loved by all, unless you're Magmar - if you're Magmar, you suck. From the depths of the Pokedex, we bring you a discussion about the world's most (un)interesting Pokemon, and rank them from most to least interesting, one Pokemon at a time.</p>
+      </div>
+      <div class="order-last">          
+        <p class="mb-0"><b>Releases: </b>Wednesdays</p>
+        <p class="mb-0"><b>Hosts: </b>Mark Frazier, John Dickendasher</p>
+      </div>
+    </div>
+    <div class="col-sm-1 pt-1 text-center d-flex flex-sm-row flex-md-column justify-content-between">
+        <a href="https://www.magmarsucks.com" class="text-primary"><i class="fa-3x fa fa-globe"></i></a>
+        <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9tYWdtYXJzdWNrcy5maXJlc2lkZS5mbS9yc3M" class="text-primary"><i class="fa-3x fab fa-google-play"></i></a>
+        <a href="https://podcasts.apple.com/us/podcast/magmar-sucks/id1125767902" class="text-primary"><i class="fa-3x fa fa-podcast"></i></a>
+        <a href="https://open.spotify.com/show/4IGiE9A4TyvHYOMrvSYS7N?si=c8z_mTf0QIKalieP2q0glQ" class="text-primary"><i class="fa-3x fab fa-spotify"></i></a>
+        <a href="https://feeds.fireside.fm/magmarsucks/rss" class="text-primary"><i class="fa-3x fa fa-rss"></i></a>
+    </div>
+  </div>
+</main>
+
   <footer class="col-sm-12 text-primary text-center subtitle">
     <hr>
     <p>
